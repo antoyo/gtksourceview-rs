@@ -5,7 +5,6 @@ version = "3.0"
 min_cfg_version = "3.4"
 generate_safety_asserts = false
 external_libraries = [
-   "Atk",
    "cairo",
    "Gdk",
    "GdkPixbuf",
@@ -31,14 +30,12 @@ generate = [
    "GtkSource.CompletionWords",
    "GtkSource.CompressionType",
    "GtkSource.DrawSpacesFlags",
-   "GtkSource.Encoding",
    "GtkSource.File",
    "GtkSource.FileLoader",
    "GtkSource.FileLoaderError",
    "GtkSource.FileSaver",
    "GtkSource.FileSaverError",
    "GtkSource.FileSaverFlags",
-   "GtkSource.Gutter",
    "GtkSource.GutterRenderer",
    "GtkSource.GutterRendererAlignmentMode",
    "GtkSource.GutterRendererPixbuf",
@@ -58,7 +55,6 @@ generate = [
    "GtkSource.SpaceDrawer",
    "GtkSource.SpaceLocationFlags",
    "GtkSource.SpaceTypeFlags",
-   "GtkSource.Style",
    "GtkSource.StyleScheme",
    "GtkSource.StyleSchemeChooser",
    "GtkSource.StyleSchemeChooserButton",
@@ -66,7 +62,6 @@ generate = [
    "GtkSource.StyleSchemeManager",
    "GtkSource.Tag",
    "GtkSource.UndoManager",
-   "GtkSource.View",
    "GtkSource.ViewGutterPosition",
 ]
 
@@ -76,22 +71,14 @@ manual = [
    "Gdk.Rectangle",
    "Gdk.RGBA",
    "Gdk.Window",
-   "GdkPixbuf.Pixbuf",
-   "Gio.File",
-   "Gio.Icon",
-   "Gio.InputStream",
    "Gio.Settings",
    "Gio.SettingsBindFlags",
    "GLib.Error",
    "GLib.Variant",
    "Gtk.ScrollStep",
-   "Gtk.TextIter",
    "Gtk.TextTagTable",
    "Gtk.TextView",
-   "Gtk.Buildable",
    "Gtk.Scrollable",
-   "Atk.ImplementorIface",
-   "Gtk.PrintContext",
    "Gtk.TextBuffer",
    "Gtk.TextMark",
    "Gtk.TextTag",
@@ -100,6 +87,19 @@ manual = [
    "Gtk.Unit",
    "Gtk.Widget",
    "Gtk.WrapMode",
-   "Pango.FontDescription",
    "Pango.Underline",
 ]
+
+[[object]]
+name = "GtkSource.Gutter"
+status = "generate"
+    [[object.function]]
+    name = "get_padding"
+    ignore = true
+
+[[object]]
+name = "GtkSource.View"
+status = "generate"
+    [[object.function]]
+    name = "get_mark_attributes"
+    ignore = true
